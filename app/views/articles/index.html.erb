@@ -2,9 +2,9 @@
   <% @articles.each do |article| %>
     <li>
       <%= link_to article_path(article) do %>
-        <h1 class="fs-2 text-primary fw-normal"><%= article.title %></h1>
+        <h1 class="fs-2 text-primary fw-normal"><%= article.title.gsub(/\.$/, '') %></h1>
       <% end %>
-      <p><%= truncate(article.content, length: 100) %></p>
+      <p><%= truncate(article.content.split("<h2>").first, length: 100) %></p>
     </li>
   <% end %>
 </ul>

@@ -1,5 +1,5 @@
 <div class="d-flex align-items-center gap-2">
-  <h1><%= @article.title %></h1>
+  <h1><%= @article.title.gsub(/\.$/, '') %></h1>
   <%= link_to '<i class="fa-solid fa-pen text-primary fs-4"></i>'.html_safe, edit_article_path(@article) %>
   <%= link_to '<i class="fa-solid fa-trash text-primary fs-4"></i>'.html_safe, article_path(@article),
                         data: {turbo_method: :delete,
