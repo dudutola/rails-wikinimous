@@ -1,8 +1,8 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [ :show, :edit, :update ]
+  before_action :set_article, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @articles = Article.all
+    @articles = Article.all.order(created_at: :desc)
   end
 
   def show; end
@@ -29,6 +29,11 @@ class ArticlesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @article.destroy
+    redirect_to @article, status: :see_other
   end
 
   private
