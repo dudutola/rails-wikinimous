@@ -32,6 +32,9 @@
       <%= link_to "Wikinimous", articles_path, class: "text-decoration-none navbar-brand" %>
       <%= link_to "New Article", new_article_path, class: "text-decoration-none btn btn-primary" %>
     </nav>
-    <%= yield %>
+
+    <div class="container mx-auto py-4" style="width: 38%;">
+      <%= yield %>
+    </div>
   </body>
 </html>

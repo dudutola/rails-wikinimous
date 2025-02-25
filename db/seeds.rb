@@ -20,11 +20,11 @@ puts "Creating 10 fake articles..."
   Article.create(
     title: Faker::Lorem.sentence(word_count: 3),
     content: [
-      Faker::Lorem.sentence(word_count: 5),
+      "<h2>#{Faker::Lorem.sentence(word_count: 5)}</h2>",
       Faker::Lorem.paragraph(sentence_count: 5),
-      Faker::Lorem.sentence(word_count: 5),
+      "<h2>#{Faker::Lorem.sentence(word_count: 5)}</h2>",
       Faker::Lorem.paragraph(sentence_count: 5),
-      Faker::Lorem.sentence(word_count: 5),
+      "<h2>#{Faker::Lorem.sentence(word_count: 5)}</h2>",
       Faker::Lorem.paragraph(sentence_count: 5)
     ].join("\n\n"),
     created_at: Faker::Time.backward(days: 365),
