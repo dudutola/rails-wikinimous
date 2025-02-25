@@ -1,4 +1,7 @@
-<h1><%= @article.title %></h1>
+<div class="d-flex align-items-center gap-2">
+  <h1><%= @article.title %></h1>
+  <%= link_to '<i class="fa-solid fa-pen text-primary fs-4"></i>'.html_safe, edit_article_path(@article) %>
+</div>
 
 <hr class="custom-line">
 
