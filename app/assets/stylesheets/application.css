@@ -14,3 +14,20 @@
   margin-bottom: 10px;
   font-weight: normal;
 }
+
+.link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: darkblue;
+  }
+}
+
+.title{
+  color: #007bff;
+
+  &:hover {
+    color: darkblue;
+  }
+}
