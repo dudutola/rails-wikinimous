@@ -2,6 +2,8 @@
 
 <hr class="custom-line">
 
-<div class="article-content">
+<div class="article-content pb-3">
   <%= @article.content.html_safe %>
 </div>
+
+<%= link_to "Back to articles", articles_path %>
